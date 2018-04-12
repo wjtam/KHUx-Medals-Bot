@@ -5,7 +5,7 @@ Note: Follows vaguely hearthscan-bot's format
 ---Format--- 
 (MedalName[linked to medal pic, Bold]) (Upright/Reverse) (P/S/M) (Tier#) (Target)
 
-(strength min/max) (def min/max) (dmg min/max) 
+(max strength) (max def) (full guilt mult) (hits)
 
 (Medal description)
 
@@ -13,11 +13,19 @@ Note: Follows vaguely hearthscan-bot's format
 ---Example (Days Riku)---
 [**358/2 Days Black Coat Riku**](http://www.khunchainedx.com/w/images/1/1d/358-2_Days_Black_Coat_Riku_6%E2%98%85_KHUX.png) Upright Magic 7 All
 
-STR: 5748/7459 DEF: 5689/7382 DMG: x8.73-13.80  
+STR: 7459 DEF: 7382 MULT: x8.73-13.80 HITS: 8
 
 Deals 8 hits. Raises Upright STR by 1 tier, lowers targets' DEF by 3 tiers for 1 turn. Inflicts more damage in slot 3.
 
+
+---Example w/o link---
+358/2 Days Black Coat Riku Upright Magic 7 All
+
+STR: 7459 DEF: 7382 MULT: x8.73-13.80  
+
+Deals 8 hits. Raises Upright STR by 1 tier, lowers targets' DEF by 3 tiers for 1 turn. Inflicts more damage in slot 3.
+
+
 ---CODE---
-comment.reply('[**' + medalName + '**](' + medalURL+ ') ' + medalUR + ' ' + medalPSM + ' ' + medalTier + ' ' medalTarget + '\n\n'
-+ medalStr + ' ' + medalDef + ' ' + medalDmg + '\n\n'
-+ medalText)
+comment.reply('[**' + medalName + '**](' + medalImg+ ') ' + medalTier + ' ' + medalUR + ' ' + medalPSM + ' ' + medalTarget 
++ '\n\n' + medalStr + ' ' + medalDef + ' ' + medalMult + ' ' '\n\n'+ medalText)
