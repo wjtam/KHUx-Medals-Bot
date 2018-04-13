@@ -11,21 +11,23 @@ Note: Follows vaguely hearthscan-bot's format
 
 
 ---Example (Days Riku)---
-[**358/2 Days Black Coat Riku**](http://www.khunchainedx.com/w/images/1/1d/358-2_Days_Black_Coat_Riku_6%E2%98%85_KHUX.png) Upright Magic 7 All
+[**FFRK Warrior of Light**](https://www.khuxbot.com/static/medal_images/FFRK_Warrior_of_Light_6.png) Upright Power 7 Single
 
-STR: 7459 DEF: 7382 MULT: x8.73-13.80 HITS: 8
+STR: 5785 DEF: 5711 DMG: x3.97~7.12 HITS: 8 
 
-Deals 8 hits. Raises Upright STR by 1 tier, lowers targets' DEF by 3 tiers for 1 turn. Inflicts more damage in slot 3.
+For 1 turn: GAU +7; UDD +2; +30% Multiplier; Enemy Counter +2
 
 
 ---Example w/o link---
-358/2 Days Black Coat Riku Upright Magic 7 All
+FFRK Warrior of Light Upright Power 7 Single
 
-STR: 7459 DEF: 7382 MULT: x8.73-13.80  
+STR: 5785 DEF: 5711 DMG: x3.97~7.12 HITS: 8
 
-Deals 8 hits. Raises Upright STR by 1 tier, lowers targets' DEF by 3 tiers for 1 turn. Inflicts more damage in slot 3.
+For 1 turn: GAU +7; UDD +2; +30% Multiplier; Enemy Counter +2
 
 
 ---CODE---
-comment.reply('[**' + medalName + '**](' + medalImg+ ') ' + medalTier + ' ' + medalUR + ' ' + medalPSM + ' ' + medalTarget 
-+ '\n\n' + medalStr + ' ' + medalDef + ' ' + medalMult + ' ' '\n\n'+ medalText)
+comment.reply('[**' + data['name'] + '**](https://www.khuxbot.com' + data['image_link'] + ') ' + data['direction'] 
+					+ ' ' + data['element'] + ' ' + str(data['tier']) + ' ' + data['targets'] 
+					+ '\n\n STR: ' + str(data['strength']) + ' DEF: ' + str(data['defence']) + ' MULT: ' + str(data['multiplier']) 
+					+ ' HITS: ' + str(data['hits']) + '\n\n'+ str(data['notes']))
