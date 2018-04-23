@@ -1,3 +1,4 @@
+#Template config.py
 username = "foos" #reddit username
 password = "bar"  #reddit password
 client_id = "1234567abcdefg" #14 char id
