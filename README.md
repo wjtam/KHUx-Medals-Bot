@@ -1,3 +1,3 @@
 # KHUx-Medals-Bot
 
-Config.py is a templet.
+Config.py is a template.
